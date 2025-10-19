@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gửi đến Bảo Vy yêu dấu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay"></div>
+  <main class="container">
+    <h1 class="title">Gửi đến <span class="name">Bảo Vy</span> yêu dấu ❤️</h1>
+    <button id="playBtn" class="play-btn" aria-label="Phát nhạc">🎵 Phát nhạc & Lời chúc</button>
+    <section id="card" class="card hidden">
+      <div id="messages" class="messages"></div>
+      <div class="footer">— Từ người thương của em</div>
+    </section>
+  </main>
+
+  <!-- YouTube embed (hidden). Replace the src with a YouTube video URL you have rights to, or let visitor click Play to start. -->
+  <div id="yt-player" class="yt-player hidden">
+    <iframe id="yt-iframe" width="0" height="0" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
