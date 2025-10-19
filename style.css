@@ -1,0 +1,33 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family: 'Segoe UI', Roboto, Arial, sans-serif}
+:root{
+  --bg:#fdeef6;
+  --accent:#ff6b9a;
+  --muted:#6b6b6b;
+}
+body,html{height:100%}
+body{background:linear-gradient(180deg,#fff0f6 0%, #fdeef6 100%);display:flex;align-items:center;justify-content:center;padding:20px}
+#overlay{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.heart{position:absolute;width:18px;height:18px;background:var(--accent);transform:rotate(45deg);border-radius:4px;opacity:0.9;animation:floatUp linear both}
+.heart:after,.heart:before{content:'';position:absolute;background:var(--accent);width:18px;height:18px;border-radius:50%}
+.heart:before{top:-9px;left:0}
+.heart:after{left:9px;top:0}
+@keyframes floatUp{0%{transform:translateY(0) scale(0.7) rotate(45deg);opacity:1}100%{transform:translateY(-650px) scale(1.1) rotate(45deg);opacity:0}}
+
+.container{max-width:720px;width:100%;text-align:center;padding:30px;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.title{font-size:28px;color:var(--accent);margin-bottom:12px}
+.name{font-weight:700}
+.play-btn{background:var(--accent);color:white;border:none;padding:12px 20px;border-radius:10px;font-size:16px;cursor:pointer;box-shadow:0 6px 18px rgba(255,107,154,0.28)}
+.play-btn:active{transform:translateY(1px)}
+
+.card{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.hidden{display:none}
+.messages{font-size:20px;color:#222;line-height:1.6;min-height:160px;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;padding:8px}
+.message-line{opacity:0;transform:translateY(10px);transition:all 600ms cubic-bezier(.2,.8,.2,1)}
+.footer{margin-top:12px;color:var(--muted);font-size:14px}
+
+/* small screens */
+@media (max-width:520px){
+  .container{padding:20px}
+  .title{font-size:22px}
+  .messages{font-size:18px;min-height:180px}
+}
